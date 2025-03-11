@@ -23,126 +23,138 @@
   font-family: Cabinet-thin;
   src: url(../Fonts/CabinetGrotesk-Light.ttf);
 }
-
-header{
-  height: 100vh;
-  width: 100vw;
-}
-
-html{
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
   overflow-x: hidden;
- font-family: cabinet-regular;
 }
 
-nav{
+/* ===== Variables ===== */
+:root {
+  --primary-green: #28D201;
+  --black: #000;
+  --white: #fff;
+  --heading-font: Cabinet-medium, sans-serif;
+  --body-font: Cabinet-regular, sans-serif;
+}
+
+/* ===== Base Styles ===== */
+body {
+  font-family: var(--body-font);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Header/Nav ===== */
+header {
+  min-height: 100vh;
+  position: relative;
+}
+
+nav {
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
   width: 100%;
-  height: 130px;
-  padding: 30px 100px;
-  Display: flex;
-  align-items: center;
-  justify-content: space-between;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
 }
 
-.nav-logo{
-  font-family: cabinet-bold;
-  font-size: 35px;
+.nav-logo img {
+  width: 15rem;
 }
 
-.main-nav{
+.main-nav {
   display: flex;
+  gap: 5rem;
   align-items: center;
-  justify-content: space-between;
 }
 
-.main-nav li{
+.main-nav li {
   list-style: none;
-  position: relative;
-  margin-right: 80px;
-  font-size: 20px;
 }
 
-.main-nav li a{
+.main-nav a {
   text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--black);
 }
 
-.reg{
-  text-decoration: none;
-  padding: 15px 25px;
-  background-color: #28D201;
-  border: 1px solid transparent;
-  border-radius: 50px;
-  color: #fff;
+.main-nav .faq span {
+  display: block;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
 }
 
-.main-nav li .faq{
-  color: #000;
+.reg {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  background: var(--primary-green);
+  color: var(--white);
+  border-radius: 5rem;
+  transition: all 0.3s ease;
 }
 
-.main-nav li .faq span{
-  font-family: cabinet-bold;
-  font-size: 27px;
+.reg:hover {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 0 1px var(--black);
 }
 
-.reg:hover{
-  background-color: #fff;
-  border: 1px solid #000;
-  color: #000;
-  transition: 0.5s;
+/* ===== Hero Section ===== */
+.hero-text-box {
+  max-width: 70rem;
+  margin: 20rem 0 0 6rem;
 }
 
-.hero-text-box{
-  /* border: 1px solid #000; */
-  width: 704.27px;
-  position: relative;
-  top: 80px;
-  left: 100px;
+.hero-text-box h1 {
+  font-family: var(--heading-font);
+  font-size: 5rem;
+  line-height: 1.1;
+  margin-bottom: 3rem;
 }
 
-.hero-text-box h1{
-  /* font-family: cabinet-bold; */
-  font-size: 55px;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
+.hero-text-box p {
+  font-size: 2.4rem;
+  max-width: 60ch;
 }
 
-.hero-text-box p{
-  font-size: 25px;
-  font-weight: 500;
-  letter-spacing: 0.7px;
-}
-
-.headsection{
-  background-color: #000;
-  height: 50%;
-  width: 100vw;
-  margin-top: 188px;
-  color: #fff;
-  padding: 100px 100px;
+.headsection {
+  background: var(--black);
+  color: var(--white);
+  padding: 10rem 6rem;
+  margin-top: 15rem;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
-.headsection2{
-  position: relative;
-  bottom: 100px;
+.headsection1 h3 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
-.headsection h3{
-  font-family: cabinet-medium;
-  font-size: 50px;
-}
-
-.headsection h1{
-  font-size: 120px;
-  font-family: cabinet-medium;
-  letter-spacing: 5px;
+.headsection1 h1 {
+  font-size: 12rem;
+  line-height: 0.9;
+  margin-bottom: 5rem;
 }
 
 .headregisterbtn{
   text-decoration: none;
-  padding: 25px 45px;
+  padding: 15px 25px;
   background-color: #28D201;
   border: 1px solid transparent;
+  font-family: var(--heading-font);
   border-radius: 50px;
   color: #fff;
   cursor: pointer;
@@ -155,52 +167,91 @@ nav{
   transition: 0.3s ease-in-out all;
 }
 
-.aboutsection{
-  height: 100vh;
-  width: 100vw;
+/* ===== About Section ===== */
+
+
+.aboutsection1 {
+  padding: 10rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+  background: var(--black);  /* Moved black background here */
+  color: var(--white);       /* Added text color */
 }
 
-.aboutsection1{
+.aboutsection1 h1 {
+  font-family: var(--heading-font);
+  font-size: 7rem;
+  color: var(--primary-green);
+  line-height: 1;
+}
+
+.aboutsection1 p {
+  font-size: 2.4rem;
+  max-width: 65ch;
+}
+
+.aboutsection2 {
+  padding: 8rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 100px;
-  background-color: #000;
-  width: 100vw;
-  height: 58.7%;
+  gap: 4rem;
+  background: var(--white);  /* Added white background */
+  color: var(--black);       /* Added black text color */
 }
 
-.aboutsection1 h1{
-  color: #28D201;
-  font-size: 70px;
-  letter-spacing: 3px;
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  
+  .headsection1 h1 {
+    font-size: 10rem;
+  }
 }
 
-.abouttext{
-  color: #fff;
-  float: right;
-  font-size: 23px;
-  width: 1000px;
-  letter-spacing: 1px;
+@media (max-width: 992px) {
+  nav {
+    padding: 3rem 4rem;
+  }
+  
+  .hero-text-box {
+    margin-left: 4rem;
+  }
+  
+  .aboutsection1,
+  .aboutsection2 {
+    padding: 8rem 4rem;
+  }
 }
 
-.aboutsection2{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 100px 100px; */
-  /* background-color: #28D201; */
-  width: 100vw;
-  /* height: 45%; */
-  text-align: center;
-}
-
-.aboutsection2 .scs{
-  font-size: 40px;
-  letter-spacing: 5px;
-}
-
-.aboutsection2 .scs span{
-  color: #28D201;
-  font-family: cabinet-thin;
+@media (max-width: 768px) {
+  .main-nav {
+    display: none; /* Add mobile menu logic here */
+  }
+  
+  .hero-text-box {
+    margin: 15rem 4rem 0;
+  }
+  
+  .headsection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  
+  .aboutsection1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .aboutsection2 img {
+    width: 10rem;
+  }
+  
+  .scs h1 {
+    font-size: 3.6rem;
+  }
 }
