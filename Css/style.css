@@ -19,6 +19,11 @@
   src: url(../Fonts/CabinetGrotesk-Medium.ttf);
 }
 
+@font-face {
+  font-family: Cabinet-thin;
+  src: url(../Fonts/CabinetGrotesk-Light.ttf);
+}
+
 header{
   height: 100vh;
   width: 100vw;
@@ -193,4 +198,9 @@ nav{
 .aboutsection2 .scs{
   font-size: 40px;
   letter-spacing: 5px;
+}
+
+.aboutsection2 .scs span{
+  color: #28D201;
+  font-family: cabinet-thin;
 }
