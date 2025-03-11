@@ -149,3 +149,48 @@ nav{
   background-color: transparent;
   transition: 0.3s ease-in-out all;
 }
+
+.aboutsection{
+  height: 100vh;
+  width: 100vw;
+}
+
+.aboutsection1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 100px;
+  background-color: #000;
+  width: 100vw;
+  height: 55%;
+}
+
+.aboutsection1 h1{
+  color: #28D201;
+  font-size: 70px;
+  letter-spacing: 3px;
+}
+
+.abouttext{
+  color: #fff;
+  float: right;
+  font-size: 23px;
+  width: 1000px;
+  letter-spacing: 1px;
+}
+
+.aboutsection2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 100px 100px; */
+  /* background-color: #28D201; */
+  width: 100vw;
+  /* height: 45%; */
+  text-align: center;
+}
+
+.aboutsection2 .scs{
+  font-size: 40px;
+  letter-spacing: 5px;
+}
