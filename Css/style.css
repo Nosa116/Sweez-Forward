@@ -34,8 +34,10 @@ html {
   --primary-green: #28D201;
   --black: #000;
   --white: #fff;
-  --heading-font: Cabinet-medium, sans-serif;
+  --heading-font: Cabinet-bold, sans-serif;
   --body-font: Cabinet-regular, sans-serif;
+  --light-font: Cabinet-thin, sans-serif;
+  --medium-font: Cabinet-medium, sans-serif;
 }
 
 /* ===== Base Styles ===== */
@@ -84,12 +86,15 @@ nav {
 .main-nav a {
   text-decoration: none;
   font-size: 1.6rem;
+}
+
+.main-nav .faq{
   color: var(--black);
 }
 
 .main-nav .faq span {
   display: block;
-  font-family: var(--heading-font);
+  font-family: var(--medium-font);
   font-weight: 700;
   font-size: 2.4rem;
   margin-bottom: 0.5rem;
@@ -98,6 +103,7 @@ nav {
 .reg {
   display: inline-block;
   padding: 1.5rem 3rem;
+  font-family: var(--medium-font);
   background: var(--primary-green);
   color: var(--white);
   border-radius: 5rem;
@@ -112,30 +118,31 @@ nav {
 
 /* ===== Hero Section ===== */
 .hero-text-box {
-  max-width: 70rem;
+  max-width: 90rem;
   margin: 20rem 0 0 6rem;
 }
 
 .hero-text-box h1 {
-  font-family: var(--heading-font);
+  font-family: var(--medium-font);
   font-size: 5rem;
   line-height: 1.1;
   margin-bottom: 3rem;
+  font-weight: 300;
 }
 
 .hero-text-box p {
   font-size: 2.4rem;
-  max-width: 60ch;
+  max-width: 80ch;
 }
 
 .headsection {
   background: var(--black);
   color: var(--white);
   padding: 10rem 6rem;
-  margin-top: 15rem;
+  margin-top: 7rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .headsection1 h3 {
@@ -146,7 +153,7 @@ nav {
 .headsection1 h1 {
   font-size: 12rem;
   line-height: 0.9;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .headregisterbtn{
@@ -154,7 +161,7 @@ nav {
   padding: 15px 25px;
   background-color: #28D201;
   border: 1px solid transparent;
-  font-family: var(--heading-font);
+  font-family: var(--medium-font);
   border-radius: 50px;
   color: #fff;
   cursor: pointer;
@@ -184,6 +191,7 @@ nav {
   font-size: 7rem;
   color: var(--primary-green);
   line-height: 1;
+  font-weight: 300;
 }
 
 .aboutsection1 p {
@@ -192,13 +200,28 @@ nav {
 }
 
 .aboutsection2 {
-  padding: 8rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
   background: var(--white);  /* Added white background */
   color: var(--black);       /* Added black text color */
+}
+
+.scs{
+  font-size: 40px;
+  font-family: var(--heading-font);
+  text-align: center;
+}
+
+.scs h1{
+  font-weight: 300;
+}
+
+.scs span{
+  color: var(--primary-green);
+  font-family: var(--body-font);
+  font-weight: 300;
 }
 
 
@@ -225,6 +248,14 @@ nav {
   .aboutsection1,
   .aboutsection2 {
     padding: 8rem 4rem;
+  }
+
+  .forarrow{
+    display: none;
+  }
+
+  .backarrow{
+    display: none;
   }
 }
 
