@@ -24,9 +24,14 @@
   src: url(../Fonts/CabinetGrotesk-Light.ttf);
 }
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+section {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===== Variables ===== */
@@ -239,6 +244,115 @@ nav {
   height: 1px; /* Thickness of the divider */
   background: #b6b6b6; /* Color of the divider */
   border-radius: 10px; /* Border radius for rounded edges */
+}
+
+/* ===== Team Section ===== */
+.team-section {
+  background: var(--white);
+  padding: 6rem 4rem; /* Reduced height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* Reduced section height */
+}
+
+.team-container {
+  background: var(--black);
+  padding: 0rem 4rem;
+  border-radius: 2rem;
+  border: 2px solid var(--primary-green); /* Thicker border */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1800px; /* Wider container */
+  width: 90%;
+  animation: containerEntrance 1s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container animation */
+@keyframes containerEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-card {
+  color: var(--white);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 300px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover animation for cards */
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Vertical dividers with animation */
+.team-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: height 0.3s ease;
+}
+
+.team-card:hover::after {
+  height: 90%;
+}
+
+/* Text elements animation */
+.team-card h2 {
+  font-family: var(--body-font);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  width: 100%;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: textReveal 0.5s 0.4s forwards;
+}
+
+.team-card p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  max-width: 90%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: textReveal 0.5s 0.6s forwards;
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== Responsive Adjustments ===== */
