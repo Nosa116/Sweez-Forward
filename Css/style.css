@@ -200,6 +200,33 @@ nav {
   font-weight: 300;
 }
 
+.heading-and-button {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center; /* Center the button horizontally */
+}
+
+.join-the-team-btn {
+  text-decoration: none;
+  padding: 15px 25px;
+  background-color: #28D201;
+  border: 1px solid transparent;
+  font-family: var(--medium-font);
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  width: 260px; /* Adjust width to fit content */
+}
+
+.join-the-team-btn:hover {
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: 0.3s ease-in-out all;
+}
+
+
 .aboutsection1 p {
   font-size: 2.4rem;
   max-width: 70ch;
@@ -241,7 +268,7 @@ nav {
 .secdivider span {
   display: block;
   width: 90%; /* Adjust width as needed */
-  height: 1px; /* Thickness of the divider */
+  height: 0.2px; /* Thickness of the divider */
   background: #b6b6b6; /* Color of the divider */
   border-radius: 10px; /* Border radius for rounded edges */
 }
