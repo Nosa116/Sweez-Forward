@@ -34,6 +34,25 @@ section {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ===== Reveal Animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay classes */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+
+
 /* ===== Variables ===== */
 :root {
   --primary-green: #28D201;
@@ -62,8 +81,9 @@ header {
   position: relative;
 }
 
+/* ===== Nav Bar Fix ===== */
 nav {
-  padding: 3rem 6rem;
+  padding: 1rem 6rem; /* Reduced padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,15 +92,18 @@ nav {
   top: 0;
   z-index: 1000;
   background: var(--white);
+  height: 80px; /* Fixed height */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 .nav-logo img {
-  width: 15rem;
+  width: 120px; /* Adjust logo size */
+  height: auto;
 }
 
 .main-nav {
   display: flex;
-  gap: 5rem;
+  gap: 3rem; /* Adjust gap between nav items */
   align-items: center;
 }
 
@@ -91,23 +114,21 @@ nav {
 .main-nav a {
   text-decoration: none;
   font-size: 1.6rem;
-}
-
-.main-nav .faq{
   color: var(--black);
+  font-family: var(--medium-font);
 }
 
 .main-nav .faq span {
   display: block;
   font-family: var(--medium-font);
   font-weight: 700;
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem; /* Slightly smaller font size */
+  margin-bottom: 0.3rem; /* Reduced margin */
 }
 
 .reg {
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem; /* Reduced padding */
   font-family: var(--medium-font);
   background: var(--primary-green);
   color: var(--white);
