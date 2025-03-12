@@ -204,7 +204,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center; /* Center the button horizontally */
+  align-items: start; /* Center the button horizontally */
 }
 
 .join-the-team-btn {
@@ -217,7 +217,7 @@ nav {
   color: #fff;
   cursor: pointer;
   font-size: 20px;
-  width: 260px; /* Adjust width to fit content */
+  width: 210px; /* Adjust width to fit content */
 }
 
 .join-the-team-btn:hover {
@@ -441,6 +441,85 @@ nav {
   
   .scs h1 {
     font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .team-card h2 {
+    font-size: 2.8rem;
+  }
+  
+  .team-card p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .team-card {
+    min-height: 280px;
+    padding: 1.5rem;
+  }
+
+  .team-card h2 {
+    font-size: 2.6rem;
+  }
+
+  .team-card p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 4rem 2rem;
+  }
+
+  .team-container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .team-card h2 {
+    font-size: 2.4rem;
+  }
+
+  .team-card p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Add divider after paragraphs */
+  
+
+  
+
+  /* Adjust spacing */
+  .team-card {
+    padding-bottom: 1rem;
+  }
+
+  .team-card p {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+@media (max-width: 360px) {
+  .team-card h2 {
+    font-size: 2.4rem;
+  }
+
+  .team-card p {
+    font-size: 1.6rem;
   }
 }
 
