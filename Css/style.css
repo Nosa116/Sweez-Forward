@@ -180,6 +180,7 @@ nav {
 .aboutsection1 {
   padding: 10rem 6rem;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 2fr;
   gap: 5rem;
   background: var(--black);  /* Moved black background here */
@@ -196,7 +197,7 @@ nav {
 
 .aboutsection1 p {
   font-size: 2.4rem;
-  max-width: 65ch;
+  max-width: 70ch;
 }
 
 .aboutsection2 {
@@ -224,6 +225,21 @@ nav {
   font-weight: 300;
 }
 
+.secdivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black); /* Match the background of the surrounding sections */
+  padding: 2rem 0; /* Adjust padding as needed */
+}
+
+.secdivider span {
+  display: block;
+  width: 90%; /* Adjust width as needed */
+  height: 1px; /* Thickness of the divider */
+  background: #b6b6b6; /* Color of the divider */
+  border-radius: 10px; /* Border radius for rounded edges */
+}
 
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 1200px) {
