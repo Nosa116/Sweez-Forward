@@ -541,3 +541,29 @@ nav {
 .reveal.delay-3 { transition-delay: 0.3s; }
 .reveal.delay-4 { transition-delay: 0.4s; }
 
+.sponsors-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.sponsors {
+  display: flex;
+  gap: 50px; /* More space between logos */
+}
+
+.sponsors img {
+  height: 60px;
+  flex-shrink: 0;
+}
+
+/* Animate from 0 to -50% so it loops seamlessly */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
