@@ -232,6 +232,16 @@ nav {
   max-width: 70ch;
 }
 
+/* Change to this */
+.abouttext {
+  font-size: 2.4rem;
+  max-width: 70ch;
+}
+
+.abouttext p {
+  max-width: 70ch; /* Retain paragraph max-width */
+}
+
 .aboutsection2 {
   display: flex;
   justify-content: space-between;
