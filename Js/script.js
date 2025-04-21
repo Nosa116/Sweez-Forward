@@ -23,6 +23,52 @@ document.querySelectorAll('.team-card').forEach((card, index) => {
   observer.observe(card);
 });
 
+// Hamburger Menu Functionality
+const hamburger = document.getElementById('hamburger');
+const mainNav = document.getElementById('mainNav');
+
+if (hamburger && mainNav) {
+  // Toggle menu on hamburger click
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+      hamburger.classList.toggle('active');
+      mainNav.classList.toggle('active');
+    }
+  });
+
+  // Close menu when clicking outside (mobile only)
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
+      if (!mainNav.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        mainNav.classList.remove('active');
+      }
+    }
+  });
+
+  // Close menu on link click (mobile only)
+  document.querySelectorAll('#mainNav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        hamburger.classList.remove('active');
+        mainNav.classList.remove('active');
+      }
+    });
+  });
+
+  // Reset menu on window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      hamburger.classList.remove('active');
+      mainNav.classList.remove('active');
+    }
+  });
+}
+
+// Sponsor Marquee Logic
 const sponsorsWrapper = document.querySelector('.sponsors-wrapper');
 const sponsorsList = document.querySelector('.sponsors');
 
