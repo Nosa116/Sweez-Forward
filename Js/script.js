@@ -6,23 +6,39 @@ const observerOptions = {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
+    entry.target.classList.toggle('active', entry.isIntersecting);
   });
 }, observerOptions);
 
-// Observe all elements with reveal class
-document.querySelectorAll('.reveal').forEach((element) => {
-  observer.observe(element);
-});
+document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
 
-// Handle team card delays
+// Team card delays
 document.querySelectorAll('.team-card').forEach((card, index) => {
   card.style.transitionDelay = `${index * 0.1}s`;
-  observer.observe(card);
 });
 
+// Marquee functionality
+const sponsorsWrapper = document.querySelector('.sponsors-wrapper');
+const sponsorsList = document.querySelector('.sponsors');
+const items = Array.from(sponsorsList.children);
+const cloneCount = Math.ceil(sponsorsWrapper.offsetWidth / (items[0].offsetWidth + 20)) + 1; // Dynamic clone count
+
+// Clone items enough to fill container
+sponsorsList.append(...Array(cloneCount).fill().flatMap(() => 
+  items.map(item => item.cloneNode(true))
+));
+
+let scrollPos = 0;
+const scrollSpeed = 1; // Adjust for desired speed
+
+function animate() {
+  scrollPos += scrollSpeed;
+  if (scrollPos >= sponsorsList.scrollWidth / 2) {
+    scrollPos = 0;
+  }
+  sponsorsWrapper.scrollLeft = scrollPos;
+  requestAnimationFrame(animate);
+}
 // Hamburger Menu Functionality
 const hamburger = document.getElementById('hamburger');
 const mainNav = document.getElementById('mainNav');
@@ -68,26 +84,15 @@ if (hamburger && mainNav) {
   });
 }
 
-// Sponsor Marquee Logic
-const sponsorsWrapper = document.querySelector('.sponsors-wrapper');
-const sponsorsList = document.querySelector('.sponsors');
-
-// Clone sponsor logos once
-const items = Array.from(sponsorsList.children);
-items.forEach(item => {
-  const clone = item.cloneNode(true);
-  sponsorsList.appendChild(clone);
+// Start animation when visible
+const marqueeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animate();
+    } else {
+      scrollPos = entry.target.scrollLeft;
+    }
+  });
 });
 
-const scrollSpeed = 1; // Adjust speed here
-
-function scrollMarquee() {
-  sponsorsWrapper.scrollLeft += scrollSpeed;
-  const maxScroll = sponsorsList.scrollWidth / 2;
-  if (sponsorsWrapper.scrollLeft >= maxScroll) {
-    sponsorsWrapper.scrollLeft -= maxScroll;
-  }
-  requestAnimationFrame(scrollMarquee);
-}
-
-scrollMarquee();
+marqueeObserver.observe(sponsorsWrapper);
