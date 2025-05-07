@@ -745,6 +745,11 @@ nav {
   background-color: #000;
   text-align: left;
   width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* ensure it fills the grid row */
+  height: 100%;
 }
 
 .collab-card h3 {
@@ -778,6 +783,10 @@ nav {
   color: #fff;
   cursor: pointer;
   font-size: 20px;
+}
+
+.collab-card .apply-btn {
+  margin-top: auto;
 }
 
 .apply-btn:hover {
