@@ -29,7 +29,7 @@ sponsorsList.append(...Array(cloneCount).fill().flatMap(() =>
 ));
 
 let scrollPos = 0;
-const scrollSpeed = 1; // Adjust for desired speed
+const scrollSpeed = 0.8; // Adjust for desired speed
 
 function animate() {
   scrollPos += scrollSpeed;

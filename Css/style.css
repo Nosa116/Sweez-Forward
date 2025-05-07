@@ -678,9 +678,7 @@ nav {
   white-space: nowrap;
 }
 
-
-/* 
-.sponsors-wrapper {
+/* .sponsors-wrapper {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -706,3 +704,79 @@ nav {
     transform: translateX(-50%);
   }
 }
+
+.collab-section {
+  padding: 80px 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.collab-header h2 {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-family: var(--medium-font);
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+
+.collab-header .highlight {
+  color: #00ff00; /* or whatever green you’re using */
+}
+
+.collab-header p {
+  font-size: 3.2rem;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.collab-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  height: 500px;
+  padding: 0 40px;
+}
+
+.collab-card {
+  border: 1px solid #00ff00;
+  border-radius: 30px;
+  padding: 30px;
+  background-color: #000;
+  text-align: left;
+  width: 350px;
+}
+
+.collab-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.collab-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.collab-card ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.apply-btn {
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.apply-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
