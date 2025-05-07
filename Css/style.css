@@ -750,36 +750,39 @@ nav {
 .collab-card h3 {
   font-size: 5rem;
   line-height: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .collab-card p {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .collab-card ul {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
 .collab-card button {
-  font-size: 1rem;
-  padding: 10px 24px;
+  font-size: 2rem;
+  padding: 15px 35px;
+  color: #fff;
 }
 
 .apply-btn {
-  background-color: #00ff00;
-  color: #000;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
+  text-decoration: none;
+  background-color: #28D201;
+  border: 1px solid transparent;
+  font-family: var(--medium-font);
   border-radius: 50px;
+  color: #fff;
   cursor: pointer;
-  transition: 0.2s;
+  font-size: 20px;
 }
 
 .apply-btn:hover {
-  background-color: #fff;
-  color: #000;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: 0.3s ease-in-out all;
 }
 
