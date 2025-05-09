@@ -43,7 +43,7 @@
   
   /* ===== Header/Nav ===== */
   header {
-    min-height: 100vh;
+    min-height: auto;
     position: relative;
   }
   
@@ -54,6 +54,7 @@
     align-items: center;
     position: fixed;
     width: 100%;
+    margin-bottom: 80px;
     top: 0;
     z-index: 1000;
     background: var(--white);
@@ -124,7 +125,7 @@
   
   /* ===== Collaboration Section ===== */
   .collab-section {
-    padding: 80px 20px;
+    padding: 195px 20px;
     background-color: var(--black);
     color: var(--white);
     text-align: center;
