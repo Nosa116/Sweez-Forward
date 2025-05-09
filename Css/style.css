@@ -721,11 +721,11 @@ nav {
 }
 
 .collab-header .highlight {
-  color: #00ff00; /* or whatever green you’re using */
+  color: #28D201; /* or whatever green you’re using */
 }
 
 .collab-header p {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   max-width: 700px;
   margin: 0 auto 60px;
 }
@@ -739,12 +739,12 @@ nav {
 }
 
 .collab-card {
-  border: 1px solid #00ff00;
+  border: 1px solid #28D201;
   border-radius: 30px;
   padding: 30px;
   background-color: #000;
   text-align: left;
-  width: 380px;
+  width: 435px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -753,26 +753,26 @@ nav {
 }
 
 .collab-card h3 {
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 40px;
   margin-bottom: 20px;
 }
 
 .collab-card p {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin-bottom: 20px;
 }
 
 .collab-card ul {
-  font-size: 2.3rem;
+  font-size: 2.0rem;
   margin-bottom: 10px;
 }
 
 .collab-card button {
-  font-size: 2rem;
-  padding: 15px 35px;
+  font-size: 2.3rem;
+  padding: 5px 31px;
   color: #fff;
-  width: 150px;
+  width: 175px;
 }
 
 .apply-btn {
