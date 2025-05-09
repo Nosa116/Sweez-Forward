@@ -1,0 +1,238 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: 'Cabinet-regular', sans-serif;
+    line-height: 1.5;
+    color: #000;
+  }
+  
+  /* ===== Font Faces ===== */
+  @font-face {
+    font-family: Cabinet-regular;
+    src: url(../Fonts/CabinetGrotesk-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: Cabinet-bold;
+    src: url(../Fonts/CabinetGrotesk-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: Cabinet-medium;
+    src: url(../Fonts/CabinetGrotesk-Medium.ttf);
+  }
+  
+  /* ===== Variables ===== */
+  :root {
+    --primary-green: #28D201;
+    --black: #000;
+    --white: #fff;
+    --medium-font: Cabinet-medium, sans-serif;
+  }
+  
+  /* ===== Header/Nav ===== */
+  header {
+    min-height: 26vh;
+    position: relative;
+  }
+  
+  nav {
+    padding: 3rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+  }
+  
+  .nav-logo img {
+    width: 15rem;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  .main-nav {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+  
+  .main-nav li {
+    list-style: none;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+  
+  .reg {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-family: var(--medium-font);
+    background: var(--primary-green);
+    color: var(--white);
+    border-radius: 5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .reg:hover {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 0 0 1px var(--black);
+  }
+  
+  /* ===== Collaboration Section ===== */
+  .collab-section {
+    padding: 80px 20px;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .collab-header h2 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    font-family: var(--medium-font);
+    line-height: 1.2;
+  }
+  
+  .highlight {
+    color: var(--primary-green);
+  }
+  
+  .collab-header p {
+    font-size: 2.2rem;
+    max-width: 700px;
+    margin: 0 auto 60px;
+  }
+  
+  .collab-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+  }
+  
+  .collab-card {
+    border: 1px solid var(--primary-green);
+    border-radius: 30px;
+    padding: 30px;
+    background-color: var(--black);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .collab-card h3 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .collab-card p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .collab-card ul {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+  
+  .apply-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: var(--primary-green);
+    border: 1px solid transparent;
+    font-family: var(--medium-font);
+    border-radius: 50px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .apply-btn:hover {
+    border: 1px solid var(--white);
+    background-color: transparent;
+  }
+  
+  /* ===== Mobile Styles ===== */
+  @media (max-width: 768px) {
+    nav {
+      padding: 3rem 4rem;
+    }
+  
+    .hamburger {
+      display: block;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+    }
+  
+    .main-nav {
+      position: fixed;
+      right: -100%;
+      top: 70px;
+      flex-direction: column;
+      background-color: var(--white);
+      width: 100%;
+      transition: right 0.3s ease;
+    }
+  
+    .main-nav.active {
+      right: 0;
+    }
+  
+    .collab-header h2 {
+      font-size: 4rem;
+    }
+  
+    .collab-cards {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+  }
+  
+  /* ===== Scroll Animations ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: none;
+  }

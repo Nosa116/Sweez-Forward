@@ -4,47 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partnerships</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="./Css/partnerships.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="partnerships.html" class="active">Partnerships</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <div class="nav-logo">
+              <img src="./Images/Sweez-logo1.png" alt="">
+            </div>
+            
+            <!-- Hamburger Menu (Mobile Only) -->
+            <div class="hamburger" id="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+        
+            <ul class="main-nav" id="mainNav">
+              <li><a href="#" class="faq"><span>Partnerships<br/></span>Partner with us</a></li>
+              <li><a href="#" class="faq"><span>FAQs<br/></span>Questions & Answers</a></li>
+              <li><a href="#" class="reg">Pre-Register</a></li>
+              <li><a href="#" class="reg">Volunteer</a></li>
             </ul>
-        </nav>
+          </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Our Partnerships</h1>
-            <p>We collaborate with amazing partners to bring value to our community.</p>
-        </section>
-
-        <section class="partners">
-            <h2>Our Trusted Partners</h2>
-            <div class="partner-list">
-                <div class="partner">
-                    <h3>Partner 1</h3>
-                    <p>Description of Partner 1.</p>
-                </div>
-                <div class="partner">
-                    <h3>Partner 2</h3>
-                    <p>Description of Partner 2.</p>
-                </div>
-                <div class="partner">
-                    <h3>Partner 3</h3>
-                    <p>Description of Partner 3.</p>
-                </div>
+        <section class="collab-section reveal">
+            <div class="collab-header reveal">
+              <h2>Power the Rise of <br/> Tomorrow’s <span class="highlight">Leaders</span></h2>
+              <p>
+                Join us in creating real opportunities and lasting impact. Together, we’re equipping young talents to lead, build, and thrive.
+              </p>
             </div>
-        </section>
+          
+            <div class="collab-cards">
+              <div class="collab-card reveal">
+                <h3>Community Partnerships</h3>
+                <p>
+                  Connect directly with the next generation of innovators. We collaborate with vibrant student and tech communities to co-create sessions, host challenges, and spread the word across campuses.
+                </p>
+                <ul>
+                  Perfect for:
+                  <li>Developer and student tech groups</li>
+                  <li>Campus ambassador programs</li>
+                  <li>National youth networks</li>
+                </ul>
+                <button class="apply-btn">Apply now</button>
+              </div>
+          
+              <div class="collab-card reveal">
+                <h3>Brand Collaborations</h3>
+                <p>
+                  Position your brand as a force for youth empowerment. We work with brands to build engaging, purposeful moments throughout the event.
+                </p>
+                <ul>
+                  Options include:
+                  <li>Branded activations or experience zones</li>
+                  <li>Exclusive product trials</li>
+                  <li>Influencer or ambassador partnerships</li>
+                  <li>Social media collaborations</li>
+                </ul>
+                <button class="apply-btn">Apply now</button>
+              </div>
+          
+              <div class="collab-card reveal">
+                <h3>Sponsorship Opportunities</h3>
+                <p>
+                  Support a movement that matters. As a sponsor, your organization can power the conference through financial contributions aligned with our Sponsorship Deck tiers—each packed with brand visibility, speaking opportunities, and custom perks.
+                </p>
+                <button class="apply-btn">Apply now</button>
+              </div>
+            </div>
+          </section>
     </main>
 
     <footer>
         <p>&copy; 2023 Sweez Forward. All rights reserved.</p>
     </footer>
+    <script src="./Js/script.js"></script>
 </body>
 </html>
