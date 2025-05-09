@@ -43,7 +43,7 @@
   
   /* ===== Header/Nav ===== */
   header {
-    min-height: 26vh;
+    min-height: 100vh;
     position: relative;
   }
   
@@ -94,6 +94,18 @@
     font-size: 1.6rem;
   }
   
+  .main-nav .faq{
+    color: var(--black);
+  }
+  
+  .main-nav .faq span {
+    display: block;
+    font-family: var(--medium-font);
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+
   .reg {
     display: inline-block;
     padding: 1.5rem 3rem;
